@@ -7,7 +7,7 @@
     1. 加入三種 Sensor
     2. 依序顯示內容
 
-# LAB2_Show_Location_on_Google.aia(檔案名稱)
+# LAB2_Show_Location_on_Google.aia(map.aia)
 ## 目標:
     實現五個功能:
         1.抓取LocationSensor(GPS)
@@ -18,7 +18,7 @@
 ## 作法or步驟:
     >>write something here<<
 
-# LAB2_flow.json(檔案名稱)
+# LAB2_flow.json(flow.json))
 ##目標:
     1.接受來自app的訊息，並回復response，2.回傳在server儲存的location data
 
