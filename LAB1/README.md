@@ -12,6 +12,8 @@
     5. `Restart` 可以重啟遊戲
     6. `Quit` 可以退出 APP
 
+![guess number](./img/guess_number.png)
+
 # LAB1_Post_text(post_text.aia)
 
 ## 目標:
@@ -33,3 +35,5 @@
     1. 新增 HTTP Request
     2. 設定 Request Type 為 POST
     3. 設定 Route 為 `/name`
+
+![post name](./img/post_name.png)

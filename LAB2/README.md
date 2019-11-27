@@ -8,6 +8,8 @@
     1. 加入三種 Sensor
     2. 依序顯示內容
 
+![get sensor](./img/get_sensor.png)
+
 # LAB2_Show_Location_on_Google.aia(map.aia)
 
 ## 目標:
@@ -35,3 +37,5 @@
 
     1. 從 APP POST 經緯度資料
     2. 從 APP GET 經緯度資料
+
+![map](./img/map.png)
