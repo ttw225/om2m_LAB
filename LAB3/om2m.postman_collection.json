@@ -1,0 +1,551 @@
+{
+	"info": {
+		"_postman_id": "c1e7037c-472e-47ea-bb84-92b1850bf185",
+		"name": "om2m",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST application",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<om2m:application xmlns:om2m=\"http://uri.etsi.org/m2m\" appId=\"MY_SENSOR\">\n\t<om2m:searchStrings>\n\t\t<om2m:searchString>Type/sensor</om2m:searchString>\n\t\t<om2m:searchString>Category/temperature</om2m:searchString>\n\t\t<om2m:searchString>Location/Home</om2m:searchString>\n\t</om2m:searchStrings>\n</om2m:application>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/om2m/gscl/applications",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"om2m",
+						"gscl",
+						"applications"
+					]
+				},
+				"description": "add MY_SENSOR"
+			},
+			"response": []
+		},
+		{
+			"name": "GET gscl",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/om2m/gscl",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"om2m",
+						"gscl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST container",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<om2m:container xmlns:om2m=\"http://uri.etsi.org/m2m\" om2m:id=\"DESCRIPTOR\"> </om2m:container>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/om2m/gscl/applications/MY_SENSOR/containers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"om2m",
+						"gscl",
+						"applications",
+						"MY_SENSOR",
+						"containers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Descriptor contentInstances",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<obj>\n\t<str name=\"type\" val=\"Temperature_Sensor\"/>\n\t<str name=\"location\" val=\"Home\"/>\n\t<str name=\"appId\" val=\"MY_SENSOR\"/>\n\t<op name=\"getValue\" href=\"gscl/applications/MY_SENSOR/containers/DATA/contentInstances/latest/content\" in=\"obix:Nil\" out=\"obix:Nil\" is=\"retrieve\"/>\n</obj>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/om2m/gscl/applications/MY_SENSOR/containers/DESCRIPTOR/contentInstances",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"om2m",
+						"gscl",
+						"applications",
+						"MY_SENSOR",
+						"containers",
+						"DESCRIPTOR",
+						"contentInstances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Data",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<om2m:container xmlns:om2m=\"http://uri.etsi.org/m2m\" om2m:id=\"DATA\"> </om2m:container>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/om2m/gscl/applications/MY_SENSOR/containers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"om2m",
+						"gscl",
+						"applications",
+						"MY_SENSOR",
+						"containers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Data contentInstances",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<obj>\n\t<str name=\"appId\" val=\"MY_SENSOR\"/>\n\t<str name=\"category\" val=\"temperature \"/>\n\t<int name=\"data\" val=\"27\"/>\n\t<int name=\"unit\" val=\"celsius\"/>\n</obj>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/om2m/gscl/applications/MY_SENSOR/containers/DATA/contentInstances",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"om2m",
+						"gscl",
+						"applications",
+						"MY_SENSOR",
+						"containers",
+						"DATA",
+						"contentInstances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Data contentInstances",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<obj>\n\t<str name=\"appId\" val=\"MY_SENSOR\"/>\n\t<str name=\"category\" val=\"temperature \"/>\n\t<int name=\"data\" val=\"27\"/>\n\t<int name=\"unit\" val=\"celsius\"/>\n</obj>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/om2m/gscl/applications/MY_SENSOR/containers/DATA/contentInstances/CI_513363981",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"om2m",
+						"gscl",
+						"applications",
+						"MY_SENSOR",
+						"containers",
+						"DATA",
+						"contentInstances",
+						"CI_513363981"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST subscribe data",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<om2m:subscription xmlns:om2m=\"http://uri.etsi.org/m2m\">\n\t<om2m:contact>http://127.0.0.1:1400/monitor</om2m:contact>\n</om2m:subscription>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/om2m/gscl/applications/MY_SENSOR/containers/DATA/contentInstances/subscriptions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"om2m",
+						"gscl",
+						"applications",
+						"MY_SENSOR",
+						"containers",
+						"DATA",
+						"contentInstances",
+						"subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST sensorData",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Haha\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1880/sensorData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1880",
+					"path": [
+						"sensorData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET sensorData",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1880/sensorData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1880",
+					"path": [
+						"sensorData"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
