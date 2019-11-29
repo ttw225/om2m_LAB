@@ -19,13 +19,13 @@
 
 ## Datas
 
-+ [postman](/om2m.postman_collection.json)
++ [postman](./om2m.postman_collection.json)
 
 + postman data
-![postman_data](/img/postman_data.png)
+![postman_data](./img/postman_data.png)
 
 + postman subscribe
-![postman_subscribe](/img/postman_subscribe.png)
+![postman_subscribe](./img/postman_subscribe.png)
 
 
 # LAB3_OM2M GA with Node-red
@@ -37,7 +37,7 @@
 		4. Create a "DATA" container
 			5. Create a "DATA contentInsances"
 	6. 在 GA(node-red) 開啟 /sensorData Server 負責轉傳 data 到 OM2M
-	
+
 
 ## 作法or步驟:
     1. Add Application to add application
@@ -49,7 +49,10 @@
 
 ## Data
 
-+ [Node-RED](/flows_GA.json)
++ [Node-RED](./flows_GA.json)
+
++ Node-Red Screen Shot
+![](./img/ga.png)
 
 
 # LAB3_OM2M  NA with Node-red
@@ -68,4 +71,7 @@
 
 ## Data
 
-+ [Node-RED](/flows_NA.json)
++ [Node-RED](./flows_NA.json)
+
++ Node-Red Screen Shot
+![](./img/na.png)
