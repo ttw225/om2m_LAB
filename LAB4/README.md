@@ -1,12 +1,12 @@
 # 記得在 project 標頭標記學號與姓名 (此行請自行刪除)
 
-# 檔案說明
+# 檔案說明:
 
-    + [notification.xml](./notification.xml): Node-red 根據訂閱的 Data 將座標資訊寫入檔案
-    + [InventorSender.aia](./InventorSender.aia): Get phone's location and send to server.
-    + [InventorReceiver.aia](./InventorReceiver.aia): Get server's location and show on map.
-    + [GA.json](./GA.json): node-red json clipboard
-    + [NA.json](./NA.json): node-red json clipboard
++ [notification.xml](./notification.xml): Node-red 根據訂閱的 Data 將座標資訊寫入檔案
++ [InventorSender.aia](./InventorSender.aia): Get phone's location and send to server.
++ [InventorReceiver.aia](./InventorReceiver.aia): Get server's location and show on map.
++ [GA.json](./GA.json): node-red json clipboard
++ [NA.json](./NA.json): node-red json clipboard
 
 # LAB4_GA with Node-red
 ## 目標:
