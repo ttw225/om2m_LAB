@@ -1,8 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<obj>
-    <str val="LAMP" name="type"/>
-    <str val="Home" name="location"/>
-    <str val="LAMP_0" name="appId"/>
-    <bool val="false" name="state"/>
-</obj>
-
+{"name":"LAMP_0","state":"true"}
