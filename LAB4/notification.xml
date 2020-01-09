@@ -1,1 +1,8 @@
-<obj><str name='appId' val='LOCATION_GATEWAY_APPLICATION'/><str name='category' val='demo'/><str name='unit' val='undefined'/><str name='latitude' val='22.999727'/><str name='longitude' val='120.227028'/></obj>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<obj>
+    <str val="LAMP" name="type"/>
+    <str val="Home" name="location"/>
+    <str val="LAMP_1" name="appId"/>
+    <bool val="false" name="state"/>
+</obj>
+

@@ -66,3 +66,7 @@ fastlane/readme.md
 
 # Mac file
 .DS_Store
+
+# environment
+
+.env
